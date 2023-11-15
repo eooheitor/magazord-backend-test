@@ -1,0 +1,9 @@
+# Define o comportamento padrão para todos os arquivos
+* text=auto
+
+# Desabilita a conversão automática para arquivos específicos
+public/assets/vendor/apexcharts/locales/pt.json -text
+public/assets/vendor/apexcharts/locales/rs.json -text
+public/assets/vendor/apexcharts/locales/ru.json -text
+public/assets/vendor/apexcharts/locales/se.json -text
+public/assets/vendor/apexcharts/locales/sk.json -text
