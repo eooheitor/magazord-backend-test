@@ -16,7 +16,8 @@ return ConsoleRunner::createHelperSet($entityManager);
 //vendor\bin\doctrine.bat
 //vendor\bin\doctrine list
 //vendor\bin\doctrine.bat orm:info
-//vendor\bin\doctrine.bat orm:mapping describe Pessoa
+//vendor\bin\doctrine.bat orm:mapping describe Entidade
 //entityName 
 //CRIAR TABELAS MAPEADAS DAS CLASSES
 //vendor\bin\doctrine.bat orm:schema-tool:create
+//Iniciar servidor php -S localhost:8000 -t public

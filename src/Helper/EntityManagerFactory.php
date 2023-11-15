@@ -27,11 +27,11 @@ class EntityManagerFactory
 
     $connection = [
       'driver'   => 'pdo_mysql',
-      'host'     => 'localhost', // ou o endereço do seu servidor MySQL
-      'dbname'   => 'magazord', // substitua pelo nome do seu banco de dados MySQL
+      'host'     => 'localhost', 
+      'dbname'   => 'magazord', 
       'user'     => 'root',
       'password' => '',
-      'charset'  => 'utf8mb4', // opcional, ajuste conforme necessário
+      'charset'  => 'utf8mb4', 
   ];
 
     return EntityManager::create($connection, $config);

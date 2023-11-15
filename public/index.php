@@ -2,50 +2,22 @@
 
 require __DIR__ . '/../vendor/autoload.php';
 
-use Heitor\Mvc\Controller\Home;
-
-use Heitor\Mvc\Controller\Pessoas\Listar;
-use Heitor\Mvc\Controller\Pessoas\Create;
-use Heitor\Mvc\Controller\Pessoas\savePessoa;
-
-use Heitor\Mvc\Controller\Contatos\createContato;
-use Heitor\Mvc\Controller\Contatos\listarContato;
+use Heitor\Mvc\Controller\ControllerRequisicao;
 
 
-switch (@$_SERVER['PATH_INFO']) {
-  case '/listar-pessoa':
-    $controlador = new Listar();
-    $controlador->processaRequisicao();
-    break;
+$caminho = @$_SERVER['PATH_INFO'];
 
-  case '/criar-pessoa':
-    $controlador = new Create();
-    $controlador->processaRequisicao();
-    break;
+$rotas = require __DIR__ . '/../config/routes.php';
 
-  case '/salvar-pessoa':
-    $controlador = new savePessoa();
-    $controlador->processaRequisicao();
-    break;
-
-  case '/listar-contato':
-    $controlador = new listarContato();
-    $controlador->processaRequisicao();
-    break;
-
-  case '/criar-contato':
-    $controlador = new createContato();
-    $controlador->processaRequisicao();
-    break;
-
-  case '':
-  case '/':
-  case '/index':
-    $controlador = new Home();
-    $controlador->processaRequisicao();
-    break;
-
-  default:
-    echo "Erro 404 - Página não encontrada";
-    break;
+if (!array_key_exists($caminho, $rotas)) {
+  http_response_code(404);
+  exit();
 }
+
+$classeControladora = $rotas[$caminho];
+/**var ControllerRequisicao $controlador */
+
+$controlador = new $classeControladora();
+$controlador->processaRequisicao();
+
+

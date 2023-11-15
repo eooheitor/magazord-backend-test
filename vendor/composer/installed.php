@@ -1,9 +1,9 @@
 <?php return array(
     'root' => array(
         'name' => 'heitor/mvc',
-        'pretty_version' => '1.0.0+no-version-set',
-        'version' => '1.0.0.0',
-        'reference' => NULL,
+        'pretty_version' => 'dev-main',
+        'version' => 'dev-main',
+        'reference' => 'e0859ad8aeab1db102b13c5384f8a6e11da5735e',
         'type' => 'projeto',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -119,9 +119,9 @@
             'dev_requirement' => false,
         ),
         'heitor/mvc' => array(
-            'pretty_version' => '1.0.0+no-version-set',
-            'version' => '1.0.0.0',
-            'reference' => NULL,
+            'pretty_version' => 'dev-main',
+            'version' => 'dev-main',
+            'reference' => 'e0859ad8aeab1db102b13c5384f8a6e11da5735e',
             'type' => 'projeto',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
