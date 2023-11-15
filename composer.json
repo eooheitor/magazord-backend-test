@@ -1,0 +1,15 @@
+{
+    "name": "heitor/mvc",
+    "description": "Painel MVC",
+    "type": "projeto",
+    "autoload": {
+        "psr-4": {
+            "Heitor\\Mvc\\": "src/"
+        }
+    },
+    "require": {
+        "doctrine/orm": "^2.16",
+        "symfony/cache": "^6.3",
+        "doctrine/annotations": "^1"
+    }
+}
