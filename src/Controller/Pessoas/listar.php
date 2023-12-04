@@ -18,7 +18,7 @@ class Listar implements ControllerRequisicao
 
   public function processaRequisicao(): void
   {
-    $termoPesquisa = filter_input(INPUT_GET, 's', FILTER_SANITIZE_STRING);
+    $termoPesquisa = filter_input(INPUT_GET, 's', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 
     // Se foi feita uma pesquisa, buscar pessoas pelo nome
     if ($termoPesquisa !== null && $termoPesquisa !== false) {
