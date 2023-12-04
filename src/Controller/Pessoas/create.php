@@ -26,8 +26,8 @@ class Create implements ControllerRequisicao
       // Processar formulário se for uma requisição POST
 
       // Pegar dados do formulário $_POST, usando filtros
-      $nome = filter_input(INPUT_POST, 'nome', FILTER_SANITIZE_STRING);
-      $cpf = filter_input(INPUT_POST, 'cpf', FILTER_SANITIZE_STRING);
+      $nome = filter_input(INPUT_POST, 'nome', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+      $cpf = filter_input(INPUT_POST, 'cpf', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 
       // Verificar se o CPF já existe no banco de dados
       $pessoaExistente = $this->entityManager->getRepository(Pessoa::class)->findOneBy(['cpf' => $cpf]);
