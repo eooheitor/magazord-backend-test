@@ -21,8 +21,8 @@ class SavePessoa implements ControllerRequisicao
   public function processaRequisicao(): void
   {
     // Pegar dados do formulário $_POST, usando filtros
-    $nome = filter_input(INPUT_POST, 'nome', FILTER_SANITIZE_STRING);
-    $cpf = filter_input(INPUT_POST, 'cpf', FILTER_SANITIZE_STRING);
+    $nome = filter_input(INPUT_POST, 'nome', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+    $cpf = filter_input(INPUT_POST, 'cpf', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 
     // Verificar se o CPF é válido
     if (!$this->validarCPF($cpf)) {
